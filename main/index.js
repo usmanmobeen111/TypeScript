@@ -23,4 +23,30 @@ logMsg("Hello");
 logMsg(43);
 logMsg(true);
 logMsg(usman);
+// interface MathFunction{
+//     (a: number, b: number): number
+// }
+const add = (a, b) => a + b;
+const subtract = (a, b) => a - b;
+const multiply = (a, b) => a * b;
+const divide = (a, b) => a / b;
+console.log(add(5, 10));
+console.log(subtract(5, 10));
+console.log(multiply(5, 10));
+console.log(divide(5, 10));
+const addAll = (a, b, c) => {
+    if (c !== undefined) {
+        return a + b + c;
+    }
+    return a + b;
+};
+console.log(addAll(2, 3, 4));
+const sumAll = (a, b, c = 4) => {
+    return a + b + c;
+};
+console.log(sumAll(4, 3));
+const total = (...nums) => {
+    return nums.reduce((acc, num) => acc + num);
+};
+logMsg(total(3, 45, 7, 8, 4));
 export {};

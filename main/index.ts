@@ -84,4 +84,41 @@ const logMsg = (msg: any): void =>{
 logMsg("Hello")
 logMsg(43)
 logMsg(true)
-logMsg(usman)
+logMsg(usman) 
+
+type mathFunciton = (a: number, b: number) => number
+// interface MathFunction{
+//     (a: number, b: number): number
+// }
+
+const add:mathFunciton = (a, b)=> a + b
+const subtract:mathFunciton = (a, b)=> a - b
+const multiply:mathFunciton = (a, b)=> a * b
+const divide:mathFunciton = (a, b)=> a / b
+
+console.log(add(5, 10))
+console.log(subtract(5, 10))
+console.log(multiply(5, 10))
+console.log(divide(5, 10))
+
+
+const addAll = (a: number, b: number, c?:number): number =>{
+    if(c !== undefined){
+        return a + b + c
+    }
+    return a + b
+}
+
+console.log(addAll(2, 3, 4))
+
+const sumAll = (a: number, b: number, c:number = 4): number =>{
+    return a + b + c
+}
+
+console.log(sumAll(4, 3))
+
+const total = (...nums: number[]): number =>{
+    return nums.reduce((acc, num)=> acc + num)
+}
+
+logMsg(total(3, 45, 7, 8, 4))
