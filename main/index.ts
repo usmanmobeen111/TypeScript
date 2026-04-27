@@ -68,3 +68,20 @@ const usman: User= {
 
 console.log(usman)
 usman.greet?.()
+
+enum Color{
+    Red, 
+    Green, 
+    Blue,
+}
+
+console.log(Color.Red)
+
+const logMsg = (msg: any): void =>{
+    console.log(msg)
+}
+
+logMsg("Hello")
+logMsg(43)
+logMsg(true)
+logMsg(usman)

@@ -9,4 +9,18 @@ const usman = {
 };
 console.log(usman);
 usman.greet?.();
+var Color;
+(function (Color) {
+    Color[Color["Red"] = 0] = "Red";
+    Color[Color["Green"] = 1] = "Green";
+    Color[Color["Blue"] = 2] = "Blue";
+})(Color || (Color = {}));
+console.log(Color.Red);
+const logMsg = (msg) => {
+    console.log(msg);
+};
+logMsg("Hello");
+logMsg(43);
+logMsg(true);
+logMsg(usman);
 export {};
