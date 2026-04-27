@@ -1,5 +1,7 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 let username = 'Usman';
 console.log(username);
-//# sourceMappingURL=main.js.map
+let a = 10;
+let b = "5";
+let c = 4;
+console.log(a + b);
+export {};
