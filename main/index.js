@@ -49,4 +49,24 @@ const total = (...nums) => {
     return nums.reduce((acc, num) => acc + num);
 };
 logMsg(total(3, 45, 7, 8, 4));
+let a = "world";
+let b = a;
+let c = a;
+let d = "world";
+let e = "world";
+console.log(a);
+console.log(b);
+console.log(c);
+console.log(d);
+console.log(e);
+const addOrConcat = (a, b, c) => {
+    if (c === 'add') {
+        return a + b;
+    }
+    return '' + a + b;
+};
+let myVal = addOrConcat(5, 10, 'concat');
+console.log(myVal);
+let nextVal = addOrConcat(5, 10, 'add');
+console.log(nextVal);
 export {};

@@ -122,3 +122,42 @@ const total = (...nums: number[]): number =>{
 }
 
 logMsg(total(3, 45, 7, 8, 4))
+
+
+type One = string
+type Two = string | number
+type Three = "Hello"
+
+let a: One = "world"
+let b = a as Two
+let c = a as Three
+
+let d = <One>"world"
+let e = <string | number>"world"
+
+
+console.log(a)
+console.log(b)
+console.log(c)
+console.log(d)
+console.log(e)
+
+
+
+const addOrConcat = (a:number, b: number, c: string): number | string =>{
+    if(c === 'add'){
+        return a + b
+    }
+    return '' + a + b
+}
+
+let myVal:string = addOrConcat(5, 10, 'concat') as string
+console.log(myVal)
+
+let nextVal:number = addOrConcat(5, 10, 'add') as number
+console.log(nextVal)
+
+
+
+
+
