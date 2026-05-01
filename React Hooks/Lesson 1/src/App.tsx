@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback, useMemo } from "react"
+import { useState, useEffect, useCallback, useMemo, useRef } from "react"
 
 interface User {
   id: number,
@@ -11,6 +11,10 @@ const App = () => {
   // const [user, setUser] = useState<User[] | null>([])
   const [count, seCount] = useState<number>(0)
   const [user, setUser] = useState<User | null>(null)
+
+  const inputRef = useRef<HTMLInputElement>(null)
+  console.log(inputRef?.current)
+  console.log(inputRef?.current?.value)
 
   useEffect(() => {
     console.log("Mounting")
@@ -44,6 +48,7 @@ const App = () => {
       <button onClick={addOne}>Add</button>
       <button onClick={() => seCount(prev => prev - 1)}>Subtract</button>
       <span>{memoizedFib}</span>
+      <input ref={inputRef} type="text" />
     </>
   )
 }
